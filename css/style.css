@@ -138,8 +138,8 @@ nav .nav-links ul li a {
 
 @media only screen and (max-width: 576px) {
     
-    nav {
-        overflow-x: hidden;
+    nav .nav-links {
+        overflow: hidden;
     }
 
     nav .nav-links .menu-button:hover + * + * {
