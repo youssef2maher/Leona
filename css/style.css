@@ -5,8 +5,15 @@
 }
 
 
-body {
-    background-color: rgb(206, 206, 206);
+
+
+
+:root {
+    --light-color: rgb(10, 207, 207);
+    --dark-color:  rgb(48, 79, 88);
+    --back-color: rgb(217, 217, 217);
+    --header-font: sans-serif;
+    --paragraph-font: arial;
 }
 
 
@@ -15,8 +22,9 @@ body {
     height: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column;
 }
+
+
 
 
 /*********************** Navigation Bar Style ***********************/
@@ -24,6 +32,8 @@ body {
 nav {
     width: 100%;
     height: 50px;
+    position: fixed;
+    z-index: 10;
     background-color: #FFF;
 }
 
@@ -137,7 +147,7 @@ nav .nav-links ul li a {
 }
 
 @media only screen and (max-width: 576px) {
-    
+
     nav .nav-links {
         overflow: hidden;
     }
@@ -152,3 +162,723 @@ nav .nav-links ul li a {
 }
 
 /*********************** /Navigation Bar Style ***********************/
+
+
+
+
+/*********************** Carousel Style ***********************/
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/img/img-3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel h2 {
+    text-align: center;
+    padding-top: 20%;
+    color: var(--light-color);
+    font-family: var(--header-font);
+    font-size: 240%;
+    line-height: 50px;
+}
+
+.carousel h3 {
+    text-align: center;
+    color: var(--dark-color);
+    font-family: var(--paragraph-font);
+    font-size: 100%;
+    line-height: 30px;
+}
+
+@media only screen and (max-width: 786px) {
+
+    .carousel h2 {
+        padding-top: 30%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .carousel h2 {
+        padding-top: 50%;
+        line-height: 70px;
+    }
+}
+
+/*********************** /Carousel Bar Style ***********************/
+
+
+
+
+/*********************** /Your Idea Style ***********************/
+
+.idea-section {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: var(--back-color);
+}
+
+.idea-section .card-container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+.idea-section .card-container .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.idea-section .card-container .card .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: var(--light-color);
+}
+
+.idea-section .card-container .card h3 {
+    padding-top: 10px;
+    color: #000;
+    font-family: var(--header-font);
+    font-size: 100%;
+}
+
+.idea-section .card-container .card p {
+    padding-top: 10px;
+    text-align: center;
+    color: grey;
+    font-family: var(--paragraph-font);
+    font-size: 80%;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 786px) {
+
+    .idea-section .card-container .card h3 {
+        padding-top: 5px;
+        font-size: 90%;
+    }
+
+    .idea-section .card-container .card p {
+        padding-top: 5px;
+        font-size: 70%;
+        line-height: 15px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .idea-section {
+        padding-bottom: 10%;
+    }
+
+    .idea-section .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .idea-section .card-container .card {
+        padding-top: 10%;
+    }
+
+    .idea-section .card-container .card h3 {
+        padding-top: 10px;
+        font-size: 100%;
+    }
+
+    .idea-section .card-container .card p {
+        padding-top: 10px;
+        font-size: 80%;
+        line-height: 20px;
+    }
+}
+
+/*********************** /Your Idea Style ***********************/
+
+
+
+
+/*********************** Services Style ***********************/
+
+.service-section {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+.service-section h2 {
+    text-align: center;
+    color: var(--back-color);
+    font-family: var(--header-font);
+    font-size: 500%;
+    line-height: 70%;
+}
+
+.service-section h4 {
+    text-align: center;
+    color: grey;
+    font-family: var(--header-font);
+    font-size: 80%;
+}
+
+.service-section .container {
+    padding-right: 5%;
+}
+
+.service-section .card-container {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    column-gap: 2%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.service-section .card-container .card {
+    width: 100%;
+}
+
+.service-section .card-container .card .icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: var(--light-color);
+}
+
+.service-section .card-container .card h3 {
+    padding-left: 3%;
+    display: inline;
+    color: #000;
+    font-family: var(--header-font);
+    font-size: 80%;
+}
+
+.service-section .card-container .card p {
+    padding-left: 11%;
+    padding-top: 4%;
+    color: grey;
+    font-family: var(--paragraph-font);
+    font-size: 75%;
+    line-height: 20px;
+}
+
+.service-section .img {
+    width: 35%;
+    height: 50vh;
+    display: flex;
+    border-right: 6vw solid var(--dark-color);
+}
+
+.service-section .img img {
+    width: 100%;
+    height: 80%;
+    align-self: center;
+    transform: translate(10px, 10px);
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 786px) {
+
+    .service-section .card-container {
+        height: 40vh;
+    }
+    
+    .service-section h2 {
+        font-size: 300%;
+        line-height: 70%;
+    }
+
+    .service-section h4 {
+        font-size: 60%;
+    }
+
+    .service-section .card-container .card .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .service-section .card-container .card p {
+        font-size: 65%;
+        line-height: 15px;
+    }
+
+    .service-section .img {
+        width: 45%;
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .service-section {
+        padding-top: 5%;
+    }
+
+    .service-section h4 {
+        padding-bottom: 5%;
+    }
+
+    .service-section .container {
+        flex-direction: column-reverse;
+        padding-right: 5%;
+    }
+
+    .service-section .card-container {
+        height: fit-content;
+        grid-template-columns: 1fr;
+    }
+    
+    .service-section .card-container .card {
+        width: 75%;
+        margin: auto;
+        padding-top: 10%;
+    }
+
+    .service-section .card-container .card p {
+        text-align: center;
+        font-size: 75%;
+        line-height: 20px;
+    }
+
+    .service-section .img {
+        width: 70%;
+        height: 50vh;
+        margin: auto;
+        border-right: 15vw solid var(--dark-color);
+    }
+}
+
+/*********************** /Services Style ***********************/
+
+
+
+
+/*********************** Portflio Style ***********************/
+
+.portfolio-section {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: rgb(243, 243, 243);
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    color: var(--back-color);
+    font-family: var(--header-font);
+    font-size: 500%;
+    line-height: 70%;
+}
+
+.portfolio-section h4 {
+    padding-bottom: 1%;
+    text-align: center;
+    color: grey;
+    font-family: var(--header-font);
+    font-size: 80%;
+}
+
+.portfolio-section .container {
+    width: 90%;
+}
+
+.portfolio-section .card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+.portfolio-section .card-container .card {
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 1px;
+}
+
+.portfolio-section .card-container .card .img {
+    width: 100%;
+}
+
+.portfolio-section .card-container .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-section .card-container .card h3 {
+    padding: 4% 0 3% 3%;
+    color: #000;
+    font-family: var(--header-font);
+    font-size: 100%;
+}
+
+.portfolio-section .card-container .card p {
+    padding: 0 0 3% 4%;
+    color: grey;
+    font-family: var(--paragraph-font);
+    font-size: 70%;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 786px) {
+
+    .portfolio-section h2 {
+        font-size: 300%;
+        line-height: 70%;
+    }
+
+    .portfolio-section h4 {
+        font-size: 60%;
+    }
+
+    .portfolio-section .card-container .card h3 {
+        font-size: 90%;
+    }
+    
+    .portfolio-section .card-container .card p {
+        padding: 0 0 3% 4%;
+        color: grey;
+        font-family: var(--paragraph-font);
+        font-size: 60%;
+        line-height: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .portfolio-section {
+        padding-top: 5%;
+    }
+
+    .portfolio-section h4 {
+        padding-bottom: 4%;
+    }
+
+    .portfolio-section .container {
+        width: 80%;
+    }
+
+    .portfolio-section .card-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        height: fit-content;
+    }
+
+    .portfolio-section .card-container .card {
+        margin-bottom: 10%;
+    }
+}
+
+/*********************** /Portfolio Style ***********************/
+
+
+
+
+/*********************** About Style ***********************/
+
+.about-section {
+    width: 100%;
+    padding-top: 2%;
+}
+
+.about-section h2 {
+    text-align: center;
+    color: var(--back-color);
+    font-family: var(--header-font);
+    font-size: 500%;
+    line-height: 70%;
+}
+
+.about-section h4 {
+    text-align: center;
+    color: grey;
+    font-family: var(--header-font);
+    font-size: 80%;
+}
+
+.about-section .container {
+    width: 95%;
+}
+
+.about-section .img {
+    width: 35%;
+    height: 40vh;
+    display: flex;
+    border-left: 6vw solid rgb(100, 100, 100);
+}
+
+.about-section .img img {
+    width: 65%;
+    height: 80%;
+    align-self: center;
+    transform: translate(-50px, 20px);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.about-section .l-shape {
+    width: 100%;
+    height: 90%;
+    transform: translate(-70px, 0);
+    border-left: 4vw solid var(--light-color);
+    border-bottom: 4vw solid var(--light-color);
+}
+
+.about-section .paragraph-container {
+    width: 90%;
+    padding-left: 8%;
+    flex-direction: column;
+}
+
+.about-section p {
+    font-size: 80%;
+    line-height: 25px;
+}
+
+.about-section .top-paragraph {
+    padding-bottom: 8%;
+    font-family: var(--paragraph-font);
+    font-weight: bolder;
+}
+
+.about-section hr {
+    width: 50%;
+    height: 2px;
+    border: none;
+    background-color: var(--light-color);
+}
+
+.about-section .bottom-paragraph {
+    padding-top: 8%;
+    font-family: var(--paragraph-font);
+    color: grey;
+}
+
+@media only screen and (max-width: 786px) {
+
+    .about-section h2 {
+        font-size: 300%;
+        line-height: 70%;
+    }
+
+    .about-section h4 {
+        font-size: 60%;
+    }
+
+    .about-section .img {
+        height: 30vh;
+        border-left: 4vw solid rgb(100, 100, 100);
+    }
+
+    
+    .about-section .img img {
+        width: 65%;
+        transform: translate(-20px, 10px);
+    }
+
+    .about-section .l-shape {
+        transform: translate(-30px, 0);
+        border-left: 3vw solid var(--light-color);
+        border-bottom: 3vw solid var(--light-color);
+    }
+
+    .about-section p {
+        font-size: 60%;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .about-section {
+        padding-top: 5%;
+    }
+
+    .about-section h4 {
+        padding-bottom: 4%;
+    }
+
+    .about-section .container {
+        flex-direction: column;
+    }
+
+    .about-section .img {
+        width: 75%;
+        height: 50vh;
+        margin: auto;
+        border-left: 12vw solid rgb(100, 100, 100);
+    }
+    
+    .about-section .img img {
+        transform: translate(-30px, 20px);
+    }
+    
+    .about-section .l-shape {
+        width: 100%;
+        height: 90%;
+        transform: translate(-50px, 0);
+        border-left: 10vw solid var(--light-color);
+        border-bottom: 10vw solid var(--light-color);
+    }
+
+    .about-section p {
+        font-size: 80%;
+        line-height: 25px;
+    }
+    
+    .about-section .top-paragraph {
+        padding-top: 8%;
+        padding-bottom: 8%;
+    }
+    
+    .about-section .bottom-paragraph {
+        padding-top: 8%;
+        padding-bottom: 8%;
+    }
+}
+
+/*********************** /About Style ***********************/
+
+
+
+
+/*********************** Contact Style ***********************/
+
+.contact-section {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(243, 243, 243);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--back-color);
+    font-family: var(--header-font);
+    font-size: 500%;
+    line-height: 70%;
+}
+
+.contact-section h4 {
+    text-align: center;
+    color: grey;
+    font-family: var(--header-font);
+    font-size: 80%;
+}
+
+.contact-section h3 {
+    text-align: center;
+}
+
+.contact-section .title {
+    padding-top: 4%;
+    color: var(--dark-color);
+    font-family: var(--header-font);
+    font-size: 170%;
+}
+
+.contact-section .mail {
+    padding-top: 2%;
+    color: var(--light-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 160%;
+}
+
+.contact-section h5 {
+    padding-top: 2%;
+    text-align: center;
+    font-family: var(--paragraph-font);
+    font-size: 70%;
+    color: grey;
+}
+
+@media only screen and (max-width: 786px) {
+
+    .contact-section h2 {
+        font-size: 300%;
+        line-height: 70%;
+    }
+
+    .contact-section h4 {
+        font-size: 60%;
+    }
+
+    .contact-section .title {
+        padding-top: 2%;
+        font-size: 130%;
+    }
+
+    .contact-section .mail {
+        padding-top: 1%;
+        font-size: 120%;
+    }
+
+    .contact-section h5 {
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .contact-section {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
+
+/*********************** /Contact Style ***********************/
+
+
+
+
+/*********************** Footer Style ***********************/
+
+footer {
+    width: 100%;
+    background-color: var(--dark-color);
+}
+
+footer h5 {
+    padding: 2% 0;
+    text-align: center;
+    color: #FFF;
+    font-family: var(--paragraph-font);
+    font-size: 100%;
+    font-weight: lighter;
+}
+
+footer span {
+    color: var(--light-color);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 786px) {
+
+    footer h5 {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    footer h5 {
+        font-size: 75%;
+    }
+}
+
+/*********************** /Footer Style ***********************/
+
+
+
+.scroll {
+    width: 100%;
+    height: 200vh;
+}
