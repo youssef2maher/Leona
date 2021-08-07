@@ -171,7 +171,7 @@ nav .nav-links ul li a {
 .carousel {
     width: 100%;
     height: 100vh;
-    background-image: url('https://github.com/youssef2maher/Leona/blob/main/img/img-3.jpeg');
+    background-image: url('img-3.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }
